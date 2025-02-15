@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cmsmjo2f43eme"]
+[gd_scene load_steps=21 format=3 uid="uid://cmsmjo2f43eme"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_s8qlu"]
 [ext_resource type="Texture2D" uid="uid://by7fyy30s8lwh" path="res://textures/wolfweapons.png" id="1_u7g4g"]
@@ -151,6 +151,22 @@ animations = [{
 "speed": 16.0
 }]
 
+[sub_resource type="LabelSettings" id="LabelSettings_o516a"]
+font_size = 28
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5u1sy"]
+font_size = 28
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 8
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(2, 2)
+
 [node name="ui" type="CanvasLayer"]
 script = ExtResource("1_s8qlu")
 
@@ -173,3 +189,23 @@ offset_right = 579.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.248114, 0.259317, 1, 1)
+
+[node name="health_display" type="Label" parent="."]
+offset_left = 923.0
+offset_top = 609.0
+offset_right = 1042.0
+offset_bottom = 648.0
+text = "100"
+label_settings = SubResource("LabelSettings_o516a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="health_label" type="Label" parent="."]
+offset_left = 776.0
+offset_top = 608.0
+offset_right = 940.0
+offset_bottom = 648.0
+text = "HEALTH"
+label_settings = SubResource("LabelSettings_5u1sy")
+horizontal_alignment = 1
+vertical_alignment = 1

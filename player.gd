@@ -1,9 +1,13 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 const TURN_SPEED = 0.05
+
+var player_health := 100
+
+@onready var ui_script = $ui
+@onready var ray = $Camera3D/RayCast3D
 
 func _ready() -> void:
 	add_to_group("player")
@@ -33,4 +37,18 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):
 		self.rotate_y(-TURN_SPEED)
 
+	if Input.is_action_pressed("ui_accept"):
+		if ui_script.can_shoot:
+			shoot()
+
 	move_and_slide()
+
+func shoot() -> void:
+	if ray.is_colliding() and ray.get_collider().has_method("die"):
+		ray.get_collider().die()
+
+func damage() -> void:
+	player_health -= 10
+	print("Player health: ", player_health)
+	if player_health <= 0:
+		queue_free()

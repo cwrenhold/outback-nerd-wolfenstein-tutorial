@@ -5,7 +5,7 @@ extends CharacterBody3D
 const SPEED = 5.0
 var dead := false
 var is_attacking := false
-var attack_range := 5.0
+var attack_range := 20.0
 
 func _ready() -> void:
 	add_to_group("guard")
@@ -29,6 +29,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
+	look_at(player.global_position)
 	move_and_slide()
 	attack()
 
@@ -39,6 +40,9 @@ func attack() -> void:
 
 	is_attacking = true
 	$AnimatedSprite3D.play("shoot")
+
+	if $RayCast3D.is_colliding() and $RayCast3D.get_collider().has_method("damage"):
+		$RayCast3D.get_collider().damage()
 
 	# Wait for the animation to finish, then reset the state
 	await $AnimatedSprite3D.animation_finished

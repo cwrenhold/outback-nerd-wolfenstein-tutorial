@@ -2,6 +2,7 @@ extends CanvasLayer
 
 var time_since_last_shot := 0.0
 var fire_rate := 1.0
+var can_shoot := true
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,7 +12,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time_since_last_shot += delta
-	var can_shoot := time_since_last_shot >= (1.0 / fire_rate)
+	can_shoot = time_since_last_shot >= (1.0 / fire_rate)
 
 	if Global.current_weapon != "knife" && Global.ammo <= 0:
 		Global.current_weapon = "knife"
@@ -39,5 +40,10 @@ func _process(delta: float) -> void:
 		_:
 			fire_rate = 1.0
 
+	update_player_health()
+
 func _on_AnimatedSprite2D_animation_finished() -> void:
 	$AnimatedSprite2D.play(Global.current_weapon + "_idle")
+
+func update_player_health():
+	$health_display.text = str(get_parent().player_health)
