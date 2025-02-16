@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
-	look_at(player.global_position)
+	# look_at(player.global_position)
 	move_and_slide()
 	attack()
 
@@ -38,6 +38,11 @@ func attack() -> void:
 	if distance_to_player > attack_range:
 		return
 
+
+	# If the player is in range, look at the player
+	look_at(player.global_position)
+
+	# If the player is in range, attack
 	is_attacking = true
 	$AnimatedSprite3D.play("shoot")
 

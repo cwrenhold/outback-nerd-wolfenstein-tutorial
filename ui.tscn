@@ -191,9 +191,9 @@ grow_vertical = 0
 color = Color(0.248114, 0.259317, 1, 1)
 
 [node name="health_display" type="Label" parent="."]
-offset_left = 923.0
+offset_left = 1016.0
 offset_top = 609.0
-offset_right = 1042.0
+offset_right = 1135.0
 offset_bottom = 648.0
 text = "100"
 label_settings = SubResource("LabelSettings_o516a")
@@ -201,11 +201,32 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="health_label" type="Label" parent="."]
-offset_left = 776.0
+offset_left = 869.0
 offset_top = 608.0
-offset_right = 940.0
+offset_right = 1033.0
 offset_bottom = 648.0
 text = "HEALTH"
+label_settings = SubResource("LabelSettings_5u1sy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ammo_display" type="Label" parent="."]
+offset_left = 639.0
+offset_top = 609.0
+offset_right = 758.0
+offset_bottom = 648.0
+text = "100"
+label_settings = SubResource("LabelSettings_o516a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ammo_label" type="Label" parent="."]
+offset_left = 502.0
+offset_top = 609.0
+offset_right = 666.0
+offset_bottom = 649.0
+text = "AMMO
+"
 label_settings = SubResource("LabelSettings_5u1sy")
 horizontal_alignment = 1
 vertical_alignment = 1

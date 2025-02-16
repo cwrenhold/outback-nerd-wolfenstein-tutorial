@@ -1,9 +1,11 @@
-[gd_scene load_steps=29 format=3 uid="uid://cajgqxfx2ahys"]
+[gd_scene load_steps=31 format=3 uid="uid://cajgqxfx2ahys"]
 
 [ext_resource type="PackedScene" uid="uid://bwjwrup8qdybg" path="res://player.tscn" id="1_o4nlg"]
 [ext_resource type="Texture2D" uid="uid://c8pu2ioly47vm" path="res://textures/GRAYROCKS.png" id="1_phf4e"]
 [ext_resource type="Texture2D" uid="uid://u76f30l8e622" path="res://textures/grey stone wall.png" id="1_rhx8o"]
 [ext_resource type="PackedScene" uid="uid://dd183votsnjqu" path="res://guard.tscn" id="4_q6boe"]
+[ext_resource type="PackedScene" uid="uid://d1rq77yigfhlh" path="res://ammo.tscn" id="5_nvvs2"]
+[ext_resource type="PackedScene" uid="uid://3j5ylgbdmih0" path="res://health.tscn" id="6_6ejm1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_avhek"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -210,7 +212,22 @@ shape = SubResource("ConcavePolygonShape3D_r87sa")
 [node name="player" parent="." instance=ExtResource("1_o4nlg")]
 
 [node name="guard" parent="." instance=ExtResource("4_q6boe")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5654, 0, -2.11799)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.5958, 1.90735e-06, -2.12808)
 
 [node name="guard2" parent="." instance=ExtResource("4_q6boe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.58063, -1.19209e-06, -13.0241)
+
+[node name="guard3" parent="." instance=ExtResource("4_q6boe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.4075, -1.19209e-06, 15.1905)
+
+[node name="ammo" parent="." instance=ExtResource("5_nvvs2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -10.9001, 0.96, -4.15924)
+
+[node name="ammo2" parent="." instance=ExtResource("5_nvvs2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.5285, 0.96, -13.6067)
+
+[node name="ammo3" parent="." instance=ExtResource("5_nvvs2")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.6608, 0.96, 12.499)
+
+[node name="health" parent="." instance=ExtResource("6_6ejm1")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15.4145, 0.9, 8.36479)
