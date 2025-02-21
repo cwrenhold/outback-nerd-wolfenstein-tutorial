@@ -1,6 +1,6 @@
 [gd_scene load_steps=44 format=3 uid="uid://cmsmjo2f43eme"]
 
-[ext_resource type="Script" path="res://ui.gd" id="1_s8qlu"]
+[ext_resource type="Script" path="res://scripts/ui.gd" id="1_s8qlu"]
 [ext_resource type="Texture2D" uid="uid://by7fyy30s8lwh" path="res://textures/wolfweapons.png" id="1_u7g4g"]
 [ext_resource type="Texture2D" uid="uid://dfl2hyufu8hc" path="res://textures/bjface.png" id="3_bb472"]
 

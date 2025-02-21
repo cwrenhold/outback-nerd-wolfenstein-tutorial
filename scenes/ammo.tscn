@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1rq77yigfhlh"]
 
 [ext_resource type="Texture2D" uid="uid://c07m5w1o2m3ab" path="res://textures/wolf-items.png" id="1_1g1p6"]
-[ext_resource type="Script" path="res://ammo.gd" id="1_4ygsm"]
+[ext_resource type="Script" path="res://scripts/ammo.gd" id="1_4ygsm"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_fx6ph"]
 
