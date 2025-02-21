@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmsmjo2f43eme"]
+[gd_scene load_steps=44 format=3 uid="uid://cmsmjo2f43eme"]
 
 [ext_resource type="Script" path="res://ui.gd" id="1_s8qlu"]
 [ext_resource type="Texture2D" uid="uid://by7fyy30s8lwh" path="res://textures/wolfweapons.png" id="1_u7g4g"]
+[ext_resource type="Texture2D" uid="uid://dfl2hyufu8hc" path="res://textures/bjface.png" id="3_bb472"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hws11"]
 atlas = ExtResource("1_u7g4g")
@@ -167,11 +168,196 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 shadow_offset = Vector2(2, 2)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsam7"]
+atlas = ExtResource("3_bb472")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57s1f"]
+atlas = ExtResource("3_bb472")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gieia"]
+atlas = ExtResource("3_bb472")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bwn6"]
+atlas = ExtResource("3_bb472")
+region = Rect2(576, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tfhuu"]
+atlas = ExtResource("3_bb472")
+region = Rect2(608, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqpi2"]
+atlas = ExtResource("3_bb472")
+region = Rect2(640, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg2sg"]
+atlas = ExtResource("3_bb472")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gglth"]
+atlas = ExtResource("3_bb472")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy5xg"]
+atlas = ExtResource("3_bb472")
+region = Rect2(544, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lo4x"]
+atlas = ExtResource("3_bb472")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fso3"]
+atlas = ExtResource("3_bb472")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_chprb"]
+atlas = ExtResource("3_bb472")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ijf5"]
+atlas = ExtResource("3_bb472")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0kgt"]
+atlas = ExtResource("3_bb472")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a2kbh"]
+atlas = ExtResource("3_bb472")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4lgk"]
+atlas = ExtResource("3_bb472")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgttb"]
+atlas = ExtResource("3_bb472")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d73ue"]
+atlas = ExtResource("3_bb472")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2elj4"]
+atlas = ExtResource("3_bb472")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkscd"]
+atlas = ExtResource("3_bb472")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgy34"]
+atlas = ExtResource("3_bb472")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wmme"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsam7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57s1f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gieia")
+}],
+"loop": true,
+"name": &"100",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bwn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tfhuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqpi2")
+}],
+"loop": true,
+"name": &"15",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg2sg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gglth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy5xg")
+}],
+"loop": true,
+"name": &"30",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lo4x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fso3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_chprb")
+}],
+"loop": true,
+"name": &"45",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ijf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t0kgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a2kbh")
+}],
+"loop": true,
+"name": &"60",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4lgk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgttb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d73ue")
+}],
+"loop": true,
+"name": &"75",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2elj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkscd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgy34")
+}],
+"loop": true,
+"name": &"90",
+"speed": 3.0
+}]
+
 [node name="ui" type="CanvasLayer"]
 script = ExtResource("1_s8qlu")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(608, 528)
+position = Vector2(580, 483)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_t8n03")
 animation = &"mini_shoot"
@@ -184,49 +370,76 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -576.0
-offset_top = -40.0
+offset_top = -83.0
 offset_right = 579.0
 grow_horizontal = 2
 grow_vertical = 0
 color = Color(0.248114, 0.259317, 1, 1)
 
 [node name="health_display" type="Label" parent="."]
-offset_left = 1016.0
-offset_top = 609.0
-offset_right = 1135.0
-offset_bottom = 648.0
+offset_left = 831.0
+offset_top = 584.0
+offset_right = 926.0
+offset_bottom = 623.0
+text = "100"
+label_settings = SubResource("LabelSettings_o516a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="lives_display" type="Label" parent="."]
+offset_left = 1068.0
+offset_top = 588.0
+offset_right = 1132.0
+offset_bottom = 627.0
 text = "100"
 label_settings = SubResource("LabelSettings_o516a")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="health_label" type="Label" parent="."]
-offset_left = 869.0
-offset_top = 608.0
-offset_right = 1033.0
-offset_bottom = 648.0
+offset_left = 713.0
+offset_top = 585.0
+offset_right = 841.0
+offset_bottom = 625.0
 text = "HEALTH"
 label_settings = SubResource("LabelSettings_5u1sy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="lives_label" type="Label" parent="."]
+offset_left = 972.0
+offset_top = 588.0
+offset_right = 1076.0
+offset_bottom = 628.0
+text = "LIVES"
+label_settings = SubResource("LabelSettings_5u1sy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="ammo_display" type="Label" parent="."]
-offset_left = 639.0
-offset_top = 609.0
-offset_right = 758.0
-offset_bottom = 648.0
+offset_left = 413.0
+offset_top = 584.0
+offset_right = 532.0
+offset_bottom = 623.0
 text = "100"
 label_settings = SubResource("LabelSettings_o516a")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ammo_label" type="Label" parent="."]
-offset_left = 502.0
-offset_top = 609.0
-offset_right = 666.0
-offset_bottom = 649.0
+offset_left = 276.0
+offset_top = 584.0
+offset_right = 440.0
+offset_bottom = 624.0
 text = "AMMO
 "
 label_settings = SubResource("LabelSettings_5u1sy")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="bj" type="AnimatedSprite2D" parent="."]
+position = Vector2(614, 608)
+scale = Vector2(2.70312, 2.70312)
+sprite_frames = SubResource("SpriteFrames_1wmme")
+animation = &"100"
+autoplay = "100"

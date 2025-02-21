@@ -50,5 +50,12 @@ func shoot() -> void:
 func damage() -> void:
 	player_health -= 10
 	print("Player health: ", player_health)
+	print("Player lives: ", Global.lives)
 	if player_health <= 0:
-		queue_free()
+		if Global.lives > 1:
+			player_health = 100
+			Global.lives -= 1
+			get_tree().change_scene_to_file("res://world.tscn")
+		else:
+			print("Game over!")
+			queue_free()
