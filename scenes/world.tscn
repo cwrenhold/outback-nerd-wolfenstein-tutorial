@@ -1,5 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://cajgqxfx2ahys"]
+[gd_scene load_steps=33 format=3 uid="uid://cajgqxfx2ahys"]
 
+[ext_resource type="Script" path="res://scripts/world.gd" id="1_balq7"]
 [ext_resource type="PackedScene" uid="uid://bwjwrup8qdybg" path="res://scenes/player.tscn" id="1_o4nlg"]
 [ext_resource type="Texture2D" uid="uid://c8pu2ioly47vm" path="res://textures/GRAYROCKS.png" id="1_phf4e"]
 [ext_resource type="Texture2D" uid="uid://u76f30l8e622" path="res://textures/grey stone wall.png" id="1_rhx8o"]
@@ -90,7 +91,10 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 albedo_texture = ExtResource("1_rhx8o")
 uv1_scale = Vector3(10, 8, 1)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mapb7"]
+
 [node name="world" type="Node3D"]
+script = ExtResource("1_balq7")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_une76")
@@ -231,3 +235,12 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -16.6608, 0.96, 12.499)
 
 [node name="health" parent="." instance=ExtResource("6_6ejm1")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -15.4145, 0.9, 8.36479)
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1055, 0, 16.5886)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_mapb7")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

@@ -40,6 +40,7 @@ func _process(delta: float) -> void:
 		_:
 			fire_rate = 1.0
 
+	update_level_label()
 	update_health_label()
 	update_ammo_label()
 	update_lives_label()
@@ -47,6 +48,9 @@ func _process(delta: float) -> void:
 
 func _on_AnimatedSprite2D_animation_finished() -> void:
 	$AnimatedSprite2D.play(Global.current_weapon + "_idle")
+
+func update_level_label():
+	$level_display.text = str(Global.current_level)
 
 func update_health_label():
 	$health_display.text = str(get_parent().player_health)

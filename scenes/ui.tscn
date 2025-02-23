@@ -437,6 +437,27 @@ label_settings = SubResource("LabelSettings_5u1sy")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="level_display" type="Label" parent="."]
+offset_left = 160.0
+offset_top = 584.0
+offset_right = 279.0
+offset_bottom = 623.0
+text = "100"
+label_settings = SubResource("LabelSettings_o516a")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="level_label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 584.0
+offset_right = 180.0
+offset_bottom = 624.0
+text = "LEVEL
+"
+label_settings = SubResource("LabelSettings_5u1sy")
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="bj" type="AnimatedSprite2D" parent="."]
 position = Vector2(614, 608)
 scale = Vector2(2.70312, 2.70312)
